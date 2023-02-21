@@ -27,7 +27,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b, c) { //eslint-disable-line
+function multiply(a, b) { //eslint-disable-line
   let product = a * b;
   return [product, `The product of ${a} and ${b} is ${product}.`];
 }
@@ -98,10 +98,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  let product = 1; 
-  for (let i=0; i<multArr.length; i++){
-    product *= multArr[i];
-  } return [product, `The numbers ${multArr} have a product of ${product}.`]; 
+  let myProduct = multiply(multArr[0], multArr[1]);
+  let myProductOne = multiply(myProduct[0], multArr[2]);
+  return [myProductOne[0],`The numbers ${multArr} have a product of ${myProductOne[0]}.`];
+  // let product = 1; 
+  // for (let i=0; i<multArr.length; i++){
+  //   product *= multArr[i];
+  // } return [product, `The numbers ${multArr} have a product of ${product}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
