@@ -72,14 +72,24 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
+function multiplyArray(multArr) { //eslint-disable-line
+  let myProduct = multiply(multArr[0], multArr[1]);
+  let myProductOne = multiply(myProduct[0], multArr[2]);
+  return [myProductOne[0],`The numbers ${multArr} have a product of ${myProductOne[0]}.`];
+  // let product = 1; 
+  // for (let i=0; i<multArr.length; i++){
+  //   product *= multArr[i];
+  // } return [product, `The numbers ${multArr} have a product of ${product}.`];
+}
+
+
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  let num =0;
-  for (let i=0; i<sumArr.length; i++){
-    num += sumArr[i];
-  } return [num, `${sumArr} was passed in as an array of numbers, and ${num} is their sum.`];
+  let mySum = sum(sumArr[0],sumArr[1]);
+  let mySumOne = sum(mySum[0],sumArr[2]);
+  return [mySumOne[0], `${sumArr} was passed in as an array of numbers, and ${mySumOne[0]} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
